@@ -1,0 +1,15 @@
+{
+  "greeting": "Привет! 👋 Выбери услугу и удобное время — запишу за минуту.",
+  "about": "Пример студии. Замените этот текст в config.json.",
+  "adminId": 123456789,
+  "services": [
+    { "name": "Стрижка", "price": 1500, "duration": 60 },
+    { "name": "Маникюр", "price": 2500, "duration": 90 },
+    { "name": "Консультация", "price": 3000, "duration": 60 }
+  ],
+  "slotMinutes": 60,
+  "workHours": { "from": 600, "to": 1200 },
+  "daysOff": ["sun"],
+  "daysAhead": 14,
+  "blackout": []
+}
