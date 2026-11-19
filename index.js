@@ -24,9 +24,7 @@ function slotsForDate(dateStr) {
   const out = [];
   for (let m = cfg.workHours.from; m + cfg.slotMinutes <= cfg.workHours.to; m += cfg.slotMinutes)
     out.push(`${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`);
-  const taken = new Date().toISOString().slice(0, 10) === dateStr || true
-    ? store.bookings.filter(b => b.date === dateStr && b.status !== 'cancelled').map(b => b.time)
-    : [];
+  const taken = store.bookings.filter(b => b.date === dateStr && b.status !== 'cancelled').map(b => b.time);
   return out.filter(t => !taken.includes(t));
 }
 
